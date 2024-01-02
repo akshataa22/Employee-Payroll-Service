@@ -20,3 +20,8 @@ SELECT salary FROM employee_payroll
 WHERE name = 'John doe';
 SELECT * FROM employee_payroll
 WHERE start_date BETWEEN CAST('2020-03-15' AS DATE) AND DATE(NOW());
+
+ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
+UPDATE employee_payroll SET gender = 'M' WHERE name = 'John Doe';
+UPDATE employee_payroll SET gender = 'F' WHERE name = 'Alice Jobs';
+UPDATE employee_payroll SET gender = 'M' WHERE name = 'Peter Davidson';
